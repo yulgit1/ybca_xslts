@@ -5025,46 +5025,46 @@
                 <xsl:variable name="type" select="substring(.,7,1)"/>
                 <xsl:choose>
                     <xsl:when test="$type='a'">
-                        <xsl:text>Language material</xsl:text>
+                        <xsl:text>Books &amp; serials</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='c'">
-                        <xsl:text>Notated music</xsl:text>
+                        <xsl:text>Music (printed)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='d'">
-                        <xsl:text>Manuscript notated music</xsl:text>
+                        <xsl:text>Music (manuscript)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='e'">
-                        <xsl:text>Cartographic material</xsl:text>
+                        <xsl:text>Maps &amp; atlases (printed)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='f'">
-                        <xsl:text>Manuscript cartographic material</xsl:text>
+                        <xsl:text>Maps &amp; atlases (manuscript)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='g'">
-                        <xsl:text>Projected medium</xsl:text>
+                        <xsl:text>Slides &amp; video</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='i'">
-                        <xsl:text>Nonmusical sound recording</xsl:text>
+                        <xsl:text>Nonmusical sound recordings</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='j'">
-                        <xsl:text>Musical sound recording</xsl:text>
+                        <xsl:text>Musical sound recordings</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='k'">
-                        <xsl:text>Two-dimensional nonprojectable graphic</xsl:text>
+                        <xsl:text>Visual material</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='m'">
-                        <xsl:text>Computer file</xsl:text>
+                        <xsl:text>Computer files</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='o'">
                         <xsl:text>Kit</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='p'">
-                        <xsl:text>Archives or manuscripts</xsl:text>
+                        <xsl:text>Archives &amp; manuscripts</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='r'">
-                        <xsl:text>Three-dimensional artifact or naturally occurring object</xsl:text>
+                        <xsl:text>Three-dimensional artifacts</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='t'">
-                        <xsl:text>Manuscript language material</xsl:text>
+                        <xsl:text>Archives &amp; manuscripts</xsl:text>
                     </xsl:when>
                 </xsl:choose>
             </xsl:for-each>
@@ -5074,46 +5074,46 @@
                 <xsl:variable name="type" select="substring(.,7,1)"/>
                 <xsl:choose>
                     <xsl:when test="$type='a'">
-                        <xsl:text>Language material</xsl:text>
+                        <xsl:text>Books &amp; serials</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='c'">
-                        <xsl:text>Notated music</xsl:text>
+                        <xsl:text>Music (printed)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='d'">
-                        <xsl:text>Manuscript notated music</xsl:text>
+                        <xsl:text>Music (manuscript)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='e'">
-                        <xsl:text>Cartographic material</xsl:text>
+                        <xsl:text>Maps &amp; atlases (printed)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='f'">
-                        <xsl:text>Manuscript cartographic material</xsl:text>
+                        <xsl:text>Maps &amp; atlases (manuscript)</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='g'">
-                        <xsl:text>Projected medium</xsl:text>
+                        <xsl:text>Slides &amp; video</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='i'">
-                        <xsl:text>Nonmusical sound recording</xsl:text>
+                        <xsl:text>Nonmusical sound recordings</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='j'">
-                        <xsl:text>Musical sound recording</xsl:text>
+                        <xsl:text>Musical sound recordings</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='k'">
-                        <xsl:text>Two-dimensional nonprojectable graphic</xsl:text>
+                        <xsl:text>Visual material</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='m'">
-                        <xsl:text>Computer file</xsl:text>
+                        <xsl:text>Computer files</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='o'">
                         <xsl:text>Kit</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='p'">
-                        <xsl:text>Archives or manuscripts</xsl:text>
+                        <xsl:text>Archives &amp; manuscripts</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='r'">
-                        <xsl:text>Three-dimensional artifact or naturally occurring object</xsl:text>
+                        <xsl:text>Three-dimensional artifacts</xsl:text>
                     </xsl:when>
                     <xsl:when test="$type='t'">
-                        <xsl:text>Manuscript language material</xsl:text>
+                        <xsl:text>Archives &amp; manuscripts</xsl:text>
                     </xsl:when>
                 </xsl:choose>
             </xsl:for-each>
