@@ -5001,7 +5001,7 @@
         <xsl:element name="language_t">
             <xsl:variable name="code" select="substring(marc:controlfield[@tag='008'],36,3)"/>
             <xsl:variable name="lang"
-                select="document('http://www.loc.gov/standards/codelists/languages.xml')//language[child::code=$code]/name"/>
+                select="document('languages.xml')//*[local-name()='language'][*[local-name()='code']=$code]/*[local-name()='name']"/>
             <xsl:value-of select="$lang"/>
         </xsl:element>
     </xsl:template>
