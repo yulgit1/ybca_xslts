@@ -284,7 +284,7 @@
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']">
             <!-- <xsl:for-each select="lido:eventActor[1]/lido:actorInRole/lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref='preferred'][1]"> -->
-            <xsl:for-each select="lido:eventActor[1]/lido:displayActorInRole">
+            <xsl:for-each select="lido:eventActor/lido:displayActorInRole">
                 <xsl:element name="author_t">
                     <xsl:value-of select="normalize-space(.)"/>
                 </xsl:element>

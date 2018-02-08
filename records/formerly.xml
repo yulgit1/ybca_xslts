@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lido:lido xmlns:lido="http://www.lido-schema.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml" xsi:schemaLocation="http://www.lido-schema.org http://www.lido-schema.org/schema/v1.0/lido-v1.0.xsd">
+<lido:lidoRecID lido:source="Yale Center for British Art" lido:type="local">YCBA/lido-TMS-38502</lido:lidoRecID>
+<lido:category>
+<lido:conceptID lido:type="URI">http://www.cidoc-crm.org/crm-concepts/#E22</lido:conceptID>
+<lido:term xml:lang="eng">Man-Made Object</lido:term>
+</lido:category>
+<lido:descriptiveMetadata xml:lang="eng">
+<lido:objectClassificationWrap>
+<lido:objectWorkTypeWrap>
+<lido:objectWorkType>
+<lido:conceptID lido:source="AAT" lido:type="Object name">300033618</lido:conceptID>
+<lido:term>painting</lido:term>
+</lido:objectWorkType>
+<lido:objectWorkType>
+<lido:conceptID lido:source="YCBA" lido:type="Genre">29</lido:conceptID>
+<lido:term>botanical subject</lido:term>
+</lido:objectWorkType>
+</lido:objectWorkTypeWrap>
+<lido:classificationWrap>
+<lido:classification>
+<lido:conceptID lido:source="AAT" lido:type="Classification">300033618</lido:conceptID>
+<lido:term>Painting</lido:term>
+</lido:classification>
+</lido:classificationWrap>
+</lido:objectClassificationWrap>
+<lido:objectIdentificationWrap>
+<lido:titleWrap>
+<lido:titleSet lido:type="Repository title">
+<lido:appellationValue lido:pref="preferred" xml:lang="eng">Study of Hollyhocks</lido:appellationValue>
+</lido:titleSet>
+<lido:titleSet lido:type="Exhibited title">
+<lido:appellationValue lido:pref="alternate" xml:lang="eng">Hollyhocks</lido:appellationValue>
+</lido:titleSet>
+<lido:titleSet lido:type="Former title">
+<lido:appellationValue lido:pref="alternate" xml:lang="eng">Malva Rosa</lido:appellationValue>
+</lido:titleSet>
+</lido:titleWrap>
+<lido:inscriptionsWrap>
+<lido:inscriptions lido:type="Inscription">
+<lido:inscriptionTranscription/>
+</lido:inscriptions>
+<lido:inscriptions lido:type="Marks">
+<lido:inscriptionTranscription/>
+</lido:inscriptions>
+<lido:inscriptions lido:type="Lettering">
+<lido:inscriptionTranscription/>
+</lido:inscriptions>
+<lido:inscriptions lido:type="signed and dated">
+<lido:inscriptionTranscription/>
+</lido:inscriptions>
+</lido:inscriptionsWrap>
+<lido:repositoryWrap>
+<lido:repositorySet lido:type="current">
+<lido:repositoryName>
+<lido:legalBodyID lido:source="ULAN" lido:type="local">500303557</lido:legalBodyID>
+<lido:legalBodyName>
+<lido:appellationValue>Yale Center for British Art</lido:appellationValue>
+</lido:legalBodyName>
+<lido:legalBodyWeblink>http://britishart.yale.edu</lido:legalBodyWeblink>
+</lido:repositoryName>
+<lido:workID lido:type="inventory number">B2001.2.100</lido:workID>
+<lido:repositoryLocation>
+<lido:partOfPlace>
+<lido:namePlaceSet>
+<lido:appellationValue lido:label="Site">Yale Center for British Art</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>41.3080060, -72.9306282</gml:coordinates>
+</gml:Point>
+</lido:gml>
+</lido:partOfPlace>
+<lido:partOfPlace>
+<lido:placeID lido:source="TGN" lido:type="Geo location">7</lido:placeID>
+<lido:namePlaceSet>
+<lido:appellationValue>New Haven</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>41.3000, -72.9160</gml:coordinates>
+</gml:Point>
+</lido:gml>
+</lido:partOfPlace>
+</lido:repositoryLocation>
+</lido:repositorySet>
+</lido:repositoryWrap>
+<lido:displayStateEditionWrap></lido:displayStateEditionWrap>
+<lido:objectMeasurementsWrap>
+<lido:objectMeasurementsSet>
+<lido:displayObjectMeasurements>9 1/2 x 7 inches (24.1 x 17.8 cm)</lido:displayObjectMeasurements>
+<lido:objectMeasurements>
+<lido:measurementsSet>
+<lido:measurementType>height</lido:measurementType>
+<lido:measurementUnit>cm</lido:measurementUnit>
+<lido:measurementValue>24.1</lido:measurementValue>
+</lido:measurementsSet>
+<lido:measurementsSet>
+<lido:measurementType>width</lido:measurementType>
+<lido:measurementUnit>cm</lido:measurementUnit>
+<lido:measurementValue>17.8</lido:measurementValue>
+</lido:measurementsSet>
+<lido:extentMeasurements>Support (PTG)</lido:extentMeasurements>
+<lido:qualifierMeasurements/>
+</lido:objectMeasurements>
+</lido:objectMeasurementsSet>
+</lido:objectMeasurementsWrap>
+</lido:objectIdentificationWrap>
+<lido:eventWrap>
+<lido:eventSet>
+<lido:event>
+<lido:eventID lido:type="TMS">38502</lido:eventID>
+<lido:eventType>
+<lido:conceptID lido:source="AAT" lido:type="local">300054713</lido:conceptID>
+<lido:term>production</lido:term>
+</lido:eventType>
+<lido:eventActor>
+<lido:displayActorInRole>Attributed to John Constable, 1776–1837, British</lido:displayActorInRole>
+<lido:actorInRole>
+<lido:actor lido:type="person">
+<lido:actorID lido:source="YCBA" lido:type="local">18</lido:actorID>
+<lido:actorID lido:source="Biblioteca Nacional de España" lido:type="url">
+http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display
+</lido:actorID>
+<lido:actorID lido:source="Deutsche Nationalbibliothek" lido:type="url">http://d-nb.info/gnd/118521934</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="International Standard Name Identifier" lido:type="url">http://isni-url.oclc.nl/isni/0000000122770039</lido:actorID>
+<lido:actorID lido:source="Library of Congress/NACO" lido:type="url">http://id.loc.gov/authorities/names/n80007977</lido:actorID>
+<lido:actorID lido:source="National Diet Library (Japan) ???????" lido:type="url">http://id.ndl.go.jp/auth/ndlna/00512631</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="National Library of Sweden / Kungliga biblioteket - Sveriges nationalbibliotek" lido:type="url">http://libris.kb.se/resource/auth/182141</lido:actorID>
+<lido:actorID lido:source="Système Universitaire de Documentation (SUDOC) (France)" lido:type="url">http://www.idref.fr/030345952/id</lido:actorID>
+<lido:actorID lido:source="Virtual International Authority File (VIAF)" lido:type="url">http://viaf.org/viaf/17265725</lido:actorID>
+<lido:actorID lido:source="Wikipedia (en)" lido:type="url">http://en.wikipedia.org/wiki/John_Constable</lido:actorID>
+<lido:actorID lido:source="ODNB" lido:type="url">
+http://www.oxforddnb.com/view/article/6107?docPos=3
+</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:actorID lido:source="Biblioteca Nacional de España" lido:type="url">
+http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display
+</lido:actorID>
+<lido:actorID lido:source="Deutsche Nationalbibliothek" lido:type="url">http://d-nb.info/gnd/118521934</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="International Standard Name Identifier" lido:type="url">http://isni-url.oclc.nl/isni/0000000122770039</lido:actorID>
+<lido:actorID lido:source="Library of Congress/NACO" lido:type="url">http://id.loc.gov/authorities/names/n80007977</lido:actorID>
+<lido:actorID lido:source="National Diet Library (Japan) ???????" lido:type="url">http://id.ndl.go.jp/auth/ndlna/00512631</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="National Library of Sweden / Kungliga biblioteket - Sveriges nationalbibliotek" lido:type="url">http://libris.kb.se/resource/auth/182141</lido:actorID>
+<lido:actorID lido:source="Système Universitaire de Documentation (SUDOC) (France)" lido:type="url">http://www.idref.fr/030345952/id</lido:actorID>
+<lido:actorID lido:source="Virtual International Authority File (VIAF)" lido:type="url">http://viaf.org/viaf/17265725</lido:actorID>
+<lido:actorID lido:source="Wikipedia (en)" lido:type="url">http://en.wikipedia.org/wiki/John_Constable</lido:actorID>
+<lido:actorID lido:source="ODNB" lido:type="url">
+http://www.oxforddnb.com/view/article/6107?docPos=3
+</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:nameActorSet>
+<lido:appellationValue lido:pref="alternate">John Constable R. A.</lido:appellationValue>
+<lido:appellationValue lido:pref="preferred">John Constable</lido:appellationValue>
+<lido:appellationValue lido:pref="alternate">John Constable R. A.</lido:appellationValue>
+<lido:appellationValue lido:pref="preferred">John Constable</lido:appellationValue>
+</lido:nameActorSet>
+<lido:nationalityActor>
+<lido:term>British</lido:term>
+</lido:nationalityActor>
+<lido:vitalDatesActor>
+<lido:earliestDate lido:type="estimatedDate">1776</lido:earliestDate>
+<lido:latestDate lido:type="estimatedDate">1837</lido:latestDate>
+</lido:vitalDatesActor>
+<lido:genderActor>male</lido:genderActor>
+</lido:actor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Object related role">300025103</lido:conceptID>
+<lido:term>Artist</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">112172</lido:conceptID>
+<lido:term>draftsman (artist)</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">112172</lido:conceptID>
+<lido:term>draftsman (artist)</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">25136</lido:conceptID>
+<lido:term>painter</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">25136</lido:conceptID>
+<lido:term>painter</lido:term>
+</lido:roleActor>
+<lido:attributionQualifierActor>Attributed to</lido:attributionQualifierActor>
+</lido:actorInRole>
+</lido:eventActor>
+<lido:eventActor>
+<lido:displayActorInRole>Formerly John Constable, 1776–1837, British</lido:displayActorInRole>
+<lido:actorInRole>
+<lido:actor lido:type="person">
+<lido:actorID lido:source="YCBA" lido:type="local">18</lido:actorID>
+<lido:actorID lido:source="Biblioteca Nacional de España" lido:type="url">
+http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display
+</lido:actorID>
+<lido:actorID lido:source="Deutsche Nationalbibliothek" lido:type="url">http://d-nb.info/gnd/118521934</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="International Standard Name Identifier" lido:type="url">http://isni-url.oclc.nl/isni/0000000122770039</lido:actorID>
+<lido:actorID lido:source="Library of Congress/NACO" lido:type="url">http://id.loc.gov/authorities/names/n80007977</lido:actorID>
+<lido:actorID lido:source="National Diet Library (Japan) ???????" lido:type="url">http://id.ndl.go.jp/auth/ndlna/00512631</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="National Library of Sweden / Kungliga biblioteket - Sveriges nationalbibliotek" lido:type="url">http://libris.kb.se/resource/auth/182141</lido:actorID>
+<lido:actorID lido:source="Système Universitaire de Documentation (SUDOC) (France)" lido:type="url">http://www.idref.fr/030345952/id</lido:actorID>
+<lido:actorID lido:source="Virtual International Authority File (VIAF)" lido:type="url">http://viaf.org/viaf/17265725</lido:actorID>
+<lido:actorID lido:source="Wikipedia (en)" lido:type="url">http://en.wikipedia.org/wiki/John_Constable</lido:actorID>
+<lido:actorID lido:source="ODNB" lido:type="url">
+http://www.oxforddnb.com/view/article/6107?docPos=3
+</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:actorID lido:source="Biblioteca Nacional de España" lido:type="url">
+http://catalogo.bne.es/uhtbin/authoritybrowse.cgi?action=display
+</lido:actorID>
+<lido:actorID lido:source="Deutsche Nationalbibliothek" lido:type="url">http://d-nb.info/gnd/118521934</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="International Standard Name Identifier" lido:type="url">http://isni-url.oclc.nl/isni/0000000122770039</lido:actorID>
+<lido:actorID lido:source="Library of Congress/NACO" lido:type="url">http://id.loc.gov/authorities/names/n80007977</lido:actorID>
+<lido:actorID lido:source="National Diet Library (Japan) ???????" lido:type="url">http://id.ndl.go.jp/auth/ndlna/00512631</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:actorID lido:source="ULAN" lido:type="url">http://vocab.getty.edu/ulan/500115382</lido:actorID>
+<lido:actorID lido:source="National Library of Sweden / Kungliga biblioteket - Sveriges nationalbibliotek" lido:type="url">http://libris.kb.se/resource/auth/182141</lido:actorID>
+<lido:actorID lido:source="Système Universitaire de Documentation (SUDOC) (France)" lido:type="url">http://www.idref.fr/030345952/id</lido:actorID>
+<lido:actorID lido:source="Virtual International Authority File (VIAF)" lido:type="url">http://viaf.org/viaf/17265725</lido:actorID>
+<lido:actorID lido:source="Wikipedia (en)" lido:type="url">http://en.wikipedia.org/wiki/John_Constable</lido:actorID>
+<lido:actorID lido:source="ODNB" lido:type="url">
+http://www.oxforddnb.com/view/article/6107?docPos=3
+</lido:actorID>
+<lido:actorID lido:source="Wikidata" lido:type="url">https://www.wikidata.org/wiki/Q159297</lido:actorID>
+<lido:nameActorSet>
+<lido:appellationValue lido:pref="alternate">John Constable R. A.</lido:appellationValue>
+<lido:appellationValue lido:pref="preferred">John Constable</lido:appellationValue>
+<lido:appellationValue lido:pref="alternate">John Constable R. A.</lido:appellationValue>
+<lido:appellationValue lido:pref="preferred">John Constable</lido:appellationValue>
+</lido:nameActorSet>
+<lido:nationalityActor>
+<lido:term>British</lido:term>
+</lido:nationalityActor>
+<lido:vitalDatesActor>
+<lido:earliestDate lido:type="estimatedDate">1776</lido:earliestDate>
+<lido:latestDate lido:type="estimatedDate">1837</lido:latestDate>
+</lido:vitalDatesActor>
+<lido:genderActor>male</lido:genderActor>
+</lido:actor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Object related role">300025103</lido:conceptID>
+<lido:term>Artist</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">112172</lido:conceptID>
+<lido:term>draftsman (artist)</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">112172</lido:conceptID>
+<lido:term>draftsman (artist)</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">25136</lido:conceptID>
+<lido:term>painter</lido:term>
+</lido:roleActor>
+<lido:roleActor>
+<lido:conceptID lido:source="AAT" lido:type="Life role">25136</lido:conceptID>
+<lido:term>painter</lido:term>
+</lido:roleActor>
+<lido:attributionQualifierActor>Formerly</lido:attributionQualifierActor>
+</lido:actorInRole>
+</lido:eventActor>
+<lido:culture>
+<lido:conceptID lido:source="AAT" lido:type="local">300111159</lido:conceptID>
+<lido:term>British</lido:term>
+</lido:culture>
+<lido:eventDate>
+<lido:displayDate>ca. 1826</lido:displayDate>
+<lido:date>
+<lido:earliestDate>1821</lido:earliestDate>
+<lido:latestDate>1831</lido:latestDate>
+</lido:date>
+</lido:eventDate>
+<lido:periodName>
+<lido:conceptID lido:type="local" lido:source="YCBA">24</lido:conceptID>
+<lido:term>19th century</lido:term>
+</lido:periodName>
+<lido:eventPlace lido:type="Place of Activity">
+<lido:displayPlace>London</lido:displayPlace>
+<lido:place>
+<lido:namePlaceSet>
+<lido:appellationValue>London</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>51.5000, -0.1660</gml:coordinates>
+</gml:Point>
+</lido:gml>
+<lido:placeClassification>
+<lido:conceptID lido:source="TGN" lido:type="Place of Activity">7011781</lido:conceptID>
+</lido:placeClassification>
+</lido:place>
+</lido:eventPlace>
+<lido:eventPlace lido:type="Birth place">
+<lido:displayPlace>Suffolk</lido:displayPlace>
+<lido:place>
+<lido:namePlaceSet>
+<lido:appellationValue>Suffolk</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>52.1660, 1.1600</gml:coordinates>
+</gml:Point>
+</lido:gml>
+<lido:placeClassification>
+<lido:conceptID lido:source="TGN" lido:type="Birth place">7008185</lido:conceptID>
+</lido:placeClassification>
+</lido:place>
+</lido:eventPlace>
+<lido:eventPlace lido:type="Birth place">
+<lido:displayPlace>Suffolk</lido:displayPlace>
+<lido:place>
+<lido:namePlaceSet>
+<lido:appellationValue>Suffolk</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>52.1660, 1.1600</gml:coordinates>
+</gml:Point>
+</lido:gml>
+<lido:placeClassification>
+<lido:conceptID lido:source="TGN" lido:type="Birth place">7008185</lido:conceptID>
+</lido:placeClassification>
+</lido:place>
+</lido:eventPlace>
+<lido:eventPlace lido:type="Place of Activity">
+<lido:displayPlace>London</lido:displayPlace>
+<lido:place>
+<lido:namePlaceSet>
+<lido:appellationValue>London</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>51.5000, -0.1660</gml:coordinates>
+</gml:Point>
+</lido:gml>
+<lido:placeClassification>
+<lido:conceptID lido:source="TGN" lido:type="Place of Activity">7011781</lido:conceptID>
+</lido:placeClassification>
+</lido:place>
+</lido:eventPlace>
+<lido:eventPlace lido:type="Death place">
+<lido:displayPlace>Hampstead</lido:displayPlace>
+<lido:place>
+<lido:namePlaceSet>
+<lido:appellationValue>Hampstead</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>51.5500, -0.1830</gml:coordinates>
+</gml:Point>
+</lido:gml>
+<lido:placeClassification>
+<lido:conceptID lido:source="TGN" lido:type="Death place">7011827</lido:conceptID>
+</lido:placeClassification>
+</lido:place>
+</lido:eventPlace>
+<lido:eventPlace lido:type="Death place">
+<lido:displayPlace>Hampstead</lido:displayPlace>
+<lido:place>
+<lido:namePlaceSet>
+<lido:appellationValue>Hampstead</lido:appellationValue>
+</lido:namePlaceSet>
+<lido:gml>
+<gml:Point>
+<gml:coordinates>51.5500, -0.1830</gml:coordinates>
+</gml:Point>
+</lido:gml>
+<lido:placeClassification>
+<lido:conceptID lido:source="TGN" lido:type="Death place">7011827</lido:conceptID>
+</lido:placeClassification>
+</lido:place>
+</lido:eventPlace>
+<lido:eventMaterialsTech>
+<lido:displayMaterialsTech>Oil on board</lido:displayMaterialsTech>
+<lido:materialsTech>
+<lido:termMaterialsTech>
+<lido:conceptID lido:type="medium" lido:source="AAT">15050</lido:conceptID>
+<lido:term>oil paint</lido:term>
+</lido:termMaterialsTech>
+<lido:termMaterialsTech>
+<lido:conceptID lido:type="support" lido:source="AAT">14198</lido:conceptID>
+<lido:term>board</lido:term>
+</lido:termMaterialsTech>
+</lido:materialsTech>
+</lido:eventMaterialsTech>
+</lido:event>
+</lido:eventSet>
+<lido:eventSet>
+<lido:displayEvent>
+Painting in England 1700-1850 - From The Collection of Mr. and Mrs. Paul Mellon, Thursday, April 15, 1965 - Sunday, June 20, 1965
+</lido:displayEvent>
+<lido:event>
+<lido:eventID lido:type="TMS">610</lido:eventID>
+<lido:eventType>
+<lido:conceptID lido:source="AAT" lido:type="local">300054766</lido:conceptID>
+<lido:term>exhibition history</lido:term>
+</lido:eventType>
+</lido:event>
+</lido:eventSet>
+</lido:eventWrap>
+<lido:objectRelationWrap>
+<lido:subjectWrap>
+<lido:subjectSet>
+<lido:subject lido:type="description">
+<lido:subjectConcept>
+<lido:conceptID lido:source="local" lido:type="subjectConcept">-1</lido:conceptID>
+<lido:term>botanical subject</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">132399</lido:conceptID>
+<lido:term>flowers (plants)</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">248766</lido:conceptID>
+<lido:term>flora</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">25788</lido:conceptID>
+<lido:term>science</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">10135</lido:conceptID>
+<lido:term>floral</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">172863</lido:conceptID>
+<lido:term>Romantic</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">54462</lido:conceptID>
+<lido:term>science</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">54467</lido:conceptID>
+<lido:term>botany</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">11892</lido:conceptID>
+<lido:term>leaves</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">230057</lido:conceptID>
+<lido:term>stem</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">81053</lido:conceptID>
+<lido:term>study (visual work)</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="local" lido:type="subjectConcept">-1</lido:conceptID>
+<lido:term>sky</lido:term>
+</lido:subjectConcept>
+<lido:subjectConcept>
+<lido:conceptID lido:source="AAT" lido:type="subjectConcept">300343840</lido:conceptID>
+<lido:term>clouds</lido:term>
+</lido:subjectConcept>
+</lido:subject>
+</lido:subjectSet>
+</lido:subjectWrap>
+<lido:relatedWorksWrap>
+<lido:relatedWorkSet>
+<lido:relatedWork>
+<lido:displayObject>
+Graham Reynolds, /The later paintings and drawings of John Constable, /Yale University Press, New Haven, CT, 1984, p. 171 (v.1), no. 26.13, pl. 622 (v.2), NJ18 C74 R485 + (YCBA)
+</lido:displayObject>
+<lido:object>
+<lido:objectWebResource/>
+<lido:objectID lido:type="local" lido:source="LC Call Number">NJ18 C74 R485 + (YCBA)</lido:objectID>
+<lido:objectID lido:type="local" lido:source="YCBA">260</lido:objectID>
+<lido:objectNote>
+Graham Reynolds, The later paintings and drawings of John Constable, Yale University Press, New Haven, CT, 1984, p. 171 (v.1), no. 26.13, pl. 622 (v.2), NJ18 C74 R485 + (YCBA)
+</lido:objectNote>
+</lido:object>
+</lido:relatedWork>
+<lido:relatedWorkRelType>
+<lido:conceptID lido:type="local" lido:source="publication"/>
+<lido:term>related to</lido:term>
+</lido:relatedWorkRelType>
+</lido:relatedWorkSet>
+<lido:relatedWorkSet>
+<lido:relatedWork>
+<lido:displayObject>
+Robert Hoozee, /L'opera completa di Constable, /98, Rizzoli, Milano, Italy, 1979, p. 106, no. 198, NJ18 C74 A12 +H66 (YCBA)
+</lido:displayObject>
+<lido:object>
+<lido:objectWebResource/>
+<lido:objectID lido:type="local" lido:source="LC Call Number">NJ18 C74 A12 +H66 (YCBA)</lido:objectID>
+<lido:objectID lido:type="local" lido:source="YCBA">289</lido:objectID>
+<lido:objectNote>
+Robert Hoozee, L'opera completa di Constable, 98, Rizzoli, Milano, Italy, 1979, p. 106, no. 198, NJ18 C74 A12 +H66 (YCBA)
+</lido:objectNote>
+</lido:object>
+</lido:relatedWork>
+<lido:relatedWorkRelType>
+<lido:conceptID lido:type="local" lido:source="publication"/>
+<lido:term>related to</lido:term>
+</lido:relatedWorkRelType>
+</lido:relatedWorkSet>
+<lido:relatedWorkSet>
+<lido:relatedWork>
+<lido:displayObject>
+Yale University Art Gallery, /Painting in England, 1700-1850, from the collection of Mr. and Mrs. Paul Mellon, [exhibition at] Yale University Art Gallery, April 15-June 20, 1965., /vol. 1, W. Clowes and sons, New Haven, 1965, pp. 15-16 (v.1), no. 52, pl. 12, ND466 Y35 (YCBA)
+</lido:displayObject>
+<lido:object>
+<lido:objectWebResource/>
+<lido:objectID lido:type="local" lido:source="LC Call Number">ND466 Y35 (YCBA)</lido:objectID>
+<lido:objectID lido:type="local" lido:source="OCLC Number">702612521</lido:objectID>
+<lido:objectID lido:type="local" lido:source="YCBA">317</lido:objectID>
+<lido:objectNote>
+Yale University Art Gallery, Painting in England, 1700-1850, from the collection of Mr. and Mrs. Paul Mellon, [exhibition at] Yale University Art Gallery, April 15-June 20, 1965., vol. 1, W. Clowes and sons, New Haven, 1965, pp. 15-16 (v.1), no. 52, pl. 12, ND466 Y35 (YCBA)
+</lido:objectNote>
+</lido:object>
+</lido:relatedWork>
+<lido:relatedWorkRelType>
+<lido:conceptID lido:type="local" lido:source="publication"/>
+<lido:term>related to</lido:term>
+</lido:relatedWorkRelType>
+</lido:relatedWorkSet>
+<lido:relatedWorkSet>
+<lido:relatedWork>
+<lido:displayObject>
+/Painting in England 1700-1850 from the Collection of Mr. and Mrs. Paul Mellon, The Royal Academy of Arts Winter Exhibition 1964-65., , /Royal Academy of Arts, London, UK, 1964, p. 37 (v.1)..., no. 129, ND466 R68 1964/65 (YCBA) , Also available on Microfiche: Fiche B214 (YCBA)
+</lido:displayObject>
+<lido:object>
+<lido:objectWebResource/>
+<lido:objectID lido:type="local" lido:source="LC Call Number">ND466 R68 1964/65 (YCBA)</lido:objectID>
+<lido:objectID lido:type="local" lido:source="OCLC Number">02113648</lido:objectID>
+<lido:objectID lido:type="local" lido:source="YCBA">464</lido:objectID>
+<lido:objectNote>
+Painting in England 1700-1850 from the Collection of Mr. and Mrs. Paul Mellon, The Royal Academy of Arts Winter Exhibition 1964-65., , Royal Academy of Arts, London, UK, 1964, p. 37 (v.1)..., no. 129, ND466 R68 1964/65 (YCBA) , Also available on Microfiche: Fiche B214 (YCBA)
+</lido:objectNote>
+</lido:object>
+</lido:relatedWork>
+<lido:relatedWorkRelType>
+<lido:conceptID lido:type="local" lido:source="publication"/>
+<lido:term>related to</lido:term>
+</lido:relatedWorkRelType>
+</lido:relatedWorkSet>
+</lido:relatedWorksWrap>
+</lido:objectRelationWrap>
+</lido:descriptiveMetadata>
+<lido:administrativeMetadata xml:lang="eng">
+<lido:rightsWorkWrap>
+<lido:rightsWorkSet>
+<lido:rightsType>
+<lido:conceptID lido:source="YCBA" lido:type="object copyright">public domain</lido:conceptID>
+<lido:term/>
+</lido:rightsType>
+<lido:rightsHolder>
+<lido:legalBodyName>
+<lido:appellationValue>Public Domain</lido:appellationValue>
+</lido:legalBodyName>
+<lido:legalBodyWeblink/>
+</lido:rightsHolder>
+<lido:creditLine>
+Yale Center for British Art, Paul Mellon Collection
+</lido:creditLine>
+</lido:rightsWorkSet>
+</lido:rightsWorkWrap>
+<lido:recordWrap>
+<lido:recordID lido:type="local">38502</lido:recordID>
+<lido:recordType>
+<lido:conceptID lido:source="AAT" lido:type="local">300133025</lido:conceptID>
+<lido:term>Item</lido:term>
+</lido:recordType>
+<lido:recordSource>
+<lido:legalBodyID lido:type="local">Yale Center for British Art</lido:legalBodyID>
+<lido:legalBodyName>
+<lido:appellationValue>Yale Center for British Art</lido:appellationValue>
+</lido:legalBodyName>
+<lido:legalBodyWeblink>http://britishart.yale.edu</lido:legalBodyWeblink>
+</lido:recordSource>
+<lido:recordInfoSet>
+<lido:recordInfoLink lido:formatResource="html">
+http://collections.britishart.yale.edu/vufind/Record/1668066
+</lido:recordInfoLink>
+</lido:recordInfoSet>
+<lido:recordInfoSet>
+<lido:recordInfoID lido:type="URL" lido:source="YCBA">oai:tms.ycba.yale.edu:38502</lido:recordInfoID>
+</lido:recordInfoSet>
+</lido:recordWrap>
+<lido:resourceWrap>
+<lido:resourceSet>
+<lido:resourceRepresentation lido:type="thumb">
+<lido:linkResource lido:formatResource="jpg">
+http://deliver.odai.yale.edu/content/repository/YCBA/object/38502/type/2/format/1
+</lido:linkResource>
+</lido:resourceRepresentation>
+<lido:resourceRepresentation lido:type="large">
+<lido:linkResource lido:formatResource="jpg">
+http://deliver.odai.yale.edu/content/repository/YCBA/object/38502/type/2/format/3
+</lido:linkResource>
+</lido:resourceRepresentation>
+<lido:resourceRepresentation lido:type="list">
+<lido:linkResource lido:formatResource="json">
+http://deliver.odai.yale.edu/info/repository/YCBA/object/38502/type/2?output=jsonp
+</lido:linkResource>
+</lido:resourceRepresentation>
+<lido:resourceRepresentation lido:type="original">
+<lido:linkResource lido:formatResource="tif">
+http://deliver.odai.yale.edu/content/repository/YCBA/object/38502/type/2/format/6
+</lido:linkResource>
+</lido:resourceRepresentation>
+<lido:resourceType>
+<lido:term>digital image</lido:term>
+</lido:resourceType>
+<lido:resourceSource lido:type="holder of image">
+<lido:legalBodyName>
+<lido:appellationValue>Yale Center for British Art</lido:appellationValue>
+</lido:legalBodyName>
+</lido:resourceSource>
+<lido:rightsResource>
+<lido:rightsHolder>
+<lido:legalBodyID lido:type="URL">http://hdl.handle.net/10079/w6m90dq</lido:legalBodyID>
+<lido:legalBodyName>
+<lido:appellationValue>Yale Center for British Art</lido:appellationValue>
+</lido:legalBodyName>
+</lido:rightsHolder>
+</lido:rightsResource>
+</lido:resourceSet>
+</lido:resourceWrap>
+</lido:administrativeMetadata>
+</lido:lido>
