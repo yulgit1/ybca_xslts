@@ -979,12 +979,6 @@
             <xsl:element name="topic_subjectActor_facet">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="topic_t">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-            <xsl:element name="topic_facet">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
         </xsl:for-each>
     </xsl:template>
 
@@ -1005,12 +999,6 @@
     <xsl:template name="topic_subjectPlace">
         <xsl:for-each select="lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject[@lido:type='description']/lido:subjectPlace/lido:displayPlace">
             <xsl:element name="topic_subjectPlace_facet">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-            <xsl:element name="topic_t">
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-            <xsl:element name="topic_facet">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
             <xsl:element name="geographic_t">
