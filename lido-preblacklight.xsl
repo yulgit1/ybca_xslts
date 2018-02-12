@@ -356,7 +356,7 @@
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']">
             <!-- <xsl:for-each select="lido:eventActor[1]/lido:actorInRole/lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref='preferred'][1]"> -->
-            <xsl:for-each select="lido:eventActor[1]/lido:displayActorInRole">
+            <xsl:for-each select="lido:eventActor/lido:displayActorInRole">
                 <xsl:element name="author">
                     <xsl:attribute name="analyze">true</xsl:attribute>
                     <xsl:attribute name="store">true</xsl:attribute>
@@ -1148,10 +1148,6 @@
                 <xsl:attribute name="facet">true</xsl:attribute>
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="topic">
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
         </xsl:for-each>
     </xsl:template>
 
@@ -1171,10 +1167,6 @@
     <xsl:template name="topic_subjectPlace">
         <xsl:for-each select="lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject[@lido:type='description']/lido:subjectPlace/lido:displayPlace">
             <xsl:element name="topic_subjectPlace">
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:value-of select="normalize-space(.)"/>
-            </xsl:element>
-            <xsl:element name="topic">
                 <xsl:attribute name="facet">true</xsl:attribute>
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
