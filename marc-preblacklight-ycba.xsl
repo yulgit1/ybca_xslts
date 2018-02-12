@@ -4496,6 +4496,8 @@
     <xsl:template name="topic">
         <xsl:variable name="tags">600 610 611 630 650 651 653 690 692 693</xsl:variable>
         <xsl:variable name="codes">abcdefghijklmnopqrstuvwxyz</xsl:variable>
+        <xsl:variable name="codes_space">abcdefghijklmnopqrstuw</xsl:variable>
+        <xsl:variable name="codes_dash">vxyz</xsl:variable>
         <xsl:for-each select="marc:datafield[contains($tags,@tag)]">
             <xsl:element name="topic">
                 <xsl:attribute name="analyze">true</xsl:attribute>
@@ -4503,8 +4505,11 @@
                 <xsl:attribute name="facet">true</xsl:attribute>
                 <xsl:for-each select="marc:subfield[contains($codes,@code)]">
                     <xsl:value-of select="normalize-space(.)"/>
-                    <xsl:if test="following-sibling::marc:subfield[contains($codes,@code)]">
+                    <xsl:if test="following-sibling::marc:subfield[position()=1][contains($codes_dash,@code)]">
                         <xsl:text> -- </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="following-sibling::marc:subfield[position()=1][contains($codes_space,@code)]">
+                        <xsl:text> </xsl:text>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:element>
