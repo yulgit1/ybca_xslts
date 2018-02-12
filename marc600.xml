@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marc:record xmlns:marc="http://www.loc.gov/MARC21/slim" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/MARC21/slim http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd" type="Bibliographic">
+    <marc:leader>04592cem a2200613 a 4500</marc:leader>
+    <marc:controlfield tag="001">9574422</marc:controlfield>
+    <marc:controlfield tag="005">20161213171519.0</marc:controlfield>
+    <marc:controlfield tag="007">ad |anzn</marc:controlfield>
+    <marc:controlfield tag="008">101029s1579 enki e 1 eng d</marc:controlfield>
+    <marc:datafield tag="034" ind1="0" ind2=" ">
+        <marc:subfield code="a">a</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="035" ind1=" " ind2=" ">
+        <marc:subfield code="a">(OCoLC)ocn775936250</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="035" ind1=" " ind2=" ">
+        <marc:subfield code="a">9574422</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="040" ind1=" " ind2=" ">
+        <marc:subfield code="a">CtY-BA</marc:subfield>
+        <marc:subfield code="c">CtY-BA</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="079" ind1=" " ind2=" ">
+        <marc:subfield code="a">ocn775728432</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="100" ind1="1" ind2=" ">
+        <marc:subfield code="a">Saxton, Christopher,</marc:subfield>
+        <marc:subfield code="d">1542?-</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="245" ind1="1" ind2="0">
+        <marc:subfield code="a">[Atlas of the counties of England and Wales].</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="255" ind1=" " ind2=" ">
+        <marc:subfield code="a">Scales differ.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="260" ind1=" " ind2=" ">
+        <marc:subfield code="a">[London] :</marc:subfield>
+        <marc:subfield code="b">[s.n.],</marc:subfield>
+        <marc:subfield code="c">[1579]</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="300" ind1=" " ind2=" ">
+        <marc:subfield code="a">1 atlas ([1] leaf, [71] leaves of plates) :</marc:subfield>
+        <marc:subfield code="b">35 maps, port. ;</marc:subfield>
+        <marc:subfield code="c">42 cm. (fol.)</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+            Consists of 1 map of England and Wales, 34 maps of all the counties of England and Wales, a frontispiece portrait of Elizabeth I (engraved by Remy Hogenberg), and a letterpress index leaf.
+        </marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+            The work is the earliest national atlas produced by any country. Its general map of England and Wales is the earliest map of the two countries printed in Britain.
+        </marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+            The maps were drawn by Christopher Saxton and engraved (from 1574 to 1578) by RemyHogenberg (9 maps), Lenaert Terwoort (5 maps), Augustine Ryther (4 maps), Francis Scatter (2 maps), Cornelis de Hooghe (1 map), Nicholas Reynolds (1 map), and Johannes Rutlinger (1 map). 11 of the maps are unsigned.
+        </marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">Title and imprint from STC.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">Maps are dated 1574-1579.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+            Preliminary leaf with portrait of Elizabeth exists in 2 states: state 1) her dress is stretched square between the knees; state 2) her dress falls in folds between the knees. For a fuller description of the plates see Hind and Skelton. It has been conjectured that the queen was dissatisfied with her portrayal and suggested the changes in her costume.
+        </marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="510" ind1="4" ind2=" ">
+        <marc:subfield code="a">STC (2nd ed.),</marc:subfield>
+        <marc:subfield code="c">21805.1</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="510" ind1="4" ind2=" ">
+        <marc:subfield code="a">ESTC</marc:subfield>
+        <marc:subfield code="c">S95054</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="510" ind1="4" ind2=" ">
+        <marc:subfield code="a">
+            Skelton, R.A. County atlases of the British Isles, 1579-1850,
+        </marc:subfield>
+        <marc:subfield code="c">1</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="510" ind1="4" ind2=" ">
+        <marc:subfield code="a">
+            Hind, A.M. Engraving in England in the sixteenth &amp; seventeenth centuries (1952),
+        </marc:subfield>
+        <marc:subfield code="c">p. 73, 88-103</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="510" ind1="4" ind2=" ">
+        <marc:subfield code="a">Chubb, T. Printed maps (1927),</marc:subfield>
+        <marc:subfield code="c">p. 3-6</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="510" ind1="4" ind2=" ">
+        <marc:subfield code="a">
+            Shirley, R.W. Early printed maps of the British Isles,
+        </marc:subfield>
+        <marc:subfield code="c">128</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="585" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+            Selected exhibitions: "Paul Mellon's Legacy: A Passion for British Art" (Yale Center for British Art, 18 April-29 July, 2007); "The Mapmaker's art: 300 years of British cartography" (Yale Center for British Art, January 17-March 12, 1989).
+        </marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="590" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+            BAC: British Art Center copy has hand-colored maps. The frontispiece portrait of Elizabeth is the first state (and uncolored), showing Elizabeth's dress with heavy ornamentation and a hard horizontal line across her lap. Index of maps is in the form described by Skelton as "Setting B", by Hind as "First setting"; i.e., the first line-ending reads: VOLVMINE. Maps of Northamptonshire and Norfolk are in the first state (see Skelton). Bound in full calf, with silk ties. Bookplates of Henry Yates Thompson and Hermann Marx. Also formerly owned by Mildmay Fane, 2nd Earl of Westmorland (1602-1666). A large engraved portrait of Fane, engraved by P. Williamson, 1662, is bound in at front.
+        </marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="590" ind1=" " ind2=" ">
+        <marc:subfield code="a">
+            BAC: British Art Center copy also includes three instances of autograph verse by Fane, along with Fane's brief notes on the nobility of all the counties, dated circa 1658. Two of three verses by Fane are previously unknown. In one, he describes the Saxton atlas as a place "Wherein All Trauailers may vnderstand / How to direct their Voyages by Land." (Cf. Cain, Tom. The poetry of Mildmay Fane. Manchester University Press, 2001).
+        </marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="600" ind1="0" ind2="0">
+        <marc:subfield code="a">Elizabeth</marc:subfield>
+        <marc:subfield code="b">I,</marc:subfield>
+        <marc:subfield code="c">Queen of England,</marc:subfield>
+        <marc:subfield code="d">1533-1603</marc:subfield>
+        <marc:subfield code="v">Portraits.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="651" ind1=" " ind2="0">
+        <marc:subfield code="a">England</marc:subfield>
+        <marc:subfield code="v">Maps</marc:subfield>
+        <marc:subfield code="v">Early works to 1800.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="651" ind1=" " ind2="0">
+        <marc:subfield code="a">Wales</marc:subfield>
+        <marc:subfield code="v">Maps</marc:subfield>
+        <marc:subfield code="v">Early works to 1800.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="655" ind1=" " ind2="7">
+        <marc:subfield code="a">Atlases</marc:subfield>
+        <marc:subfield code="z">England</marc:subfield>
+        <marc:subfield code="y">1579.</marc:subfield>
+        <marc:subfield code="2">local</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="655" ind1=" " ind2="7">
+        <marc:subfield code="a">Atlases</marc:subfield>
+        <marc:subfield code="z">Wales</marc:subfield>
+        <marc:subfield code="y">1579.</marc:subfield>
+        <marc:subfield code="2">local</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="690" ind1=" " ind2="4">
+        <marc:subfield code="a">Chron.</marc:subfield>
+        <marc:subfield code="y">1579.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="655" ind1=" " ind2="7">
+        <marc:subfield code="a">Engravings</marc:subfield>
+        <marc:subfield code="y">1579.</marc:subfield>
+        <marc:subfield code="2">gmgpc</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="655" ind1=" " ind2="7">
+        <marc:subfield code="a">Engravings</marc:subfield>
+        <marc:subfield code="x">Hand-colored</marc:subfield>
+        <marc:subfield code="y">1579.</marc:subfield>
+        <marc:subfield code="2">gmgpc</marc:subfield>
+        <marc:subfield code="5">CtY-BA</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="692" ind1="1" ind2="4">
+        <marc:subfield code="a">Westmorland, Mildmay Fane,</marc:subfield>
+        <marc:subfield code="c">Earl of,</marc:subfield>
+        <marc:subfield code="d">1601-1666</marc:subfield>
+        <marc:subfield code="x">Provenance.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="692" ind1="1" ind2="4">
+        <marc:subfield code="a">Thompson, Henry Yates,</marc:subfield>
+        <marc:subfield code="d">1838-1928</marc:subfield>
+        <marc:subfield code="x">Bookplate.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="692" ind1="1" ind2="4">
+        <marc:subfield code="a">Marx, Hermann</marc:subfield>
+        <marc:subfield code="x">Bookplate.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Seckford, Thomas,</marc:subfield>
+        <marc:subfield code="d">1515 or 6-1587.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Hogenberg, Remy,</marc:subfield>
+        <marc:subfield code="d">1536-1587,</marc:subfield>
+        <marc:subfield code="e">engraver.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Hooghe, Cornelis de,</marc:subfield>
+        <marc:subfield code="d">d. 1583,</marc:subfield>
+        <marc:subfield code="e">engraver.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Reynold, Nicholas,</marc:subfield>
+        <marc:subfield code="d">fl. 1580,</marc:subfield>
+        <marc:subfield code="e">engraver.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Rutlinger, Johannes,</marc:subfield>
+        <marc:subfield code="d">d. 1609,</marc:subfield>
+        <marc:subfield code="e">engraver.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Ryther, Augustine,</marc:subfield>
+        <marc:subfield code="e">engraver.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Scatter, Francis,</marc:subfield>
+        <marc:subfield code="e">engraver.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Terwoort, Lenaert,</marc:subfield>
+        <marc:subfield code="e">engraver.</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="700" ind1="1" ind2=" ">
+        <marc:subfield code="a">Westmorland, Mildmay Fane,</marc:subfield>
+        <marc:subfield code="c">Earl of,</marc:subfield>
+        <marc:subfield code="d">1601-1666.</marc:subfield>
+        <marc:subfield code="5">CtY-BA</marc:subfield>
+    </marc:datafield>
+</marc:record>
