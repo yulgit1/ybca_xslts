@@ -105,7 +105,7 @@
                 <xsl:call-template name="recordSource"/>
                 <xsl:call-template name="recordID"/>
                 <xsl:call-template name="recordLevel"/>
-                <xsl:element name="cds_repository_code">YCBA</xsl:element>
+                <xsl:element name="cds_repository_code_ss">YCBA</xsl:element>
                 <xsl:call-template name="cds_object_id"/>
             </xsl:for-each>
         </xsl:element>
@@ -113,7 +113,7 @@
 
     <xsl:template name="cds_object_id">
         <xsl:for-each select="lido:recordWrap/lido:recordID/text()">
-            <xsl:element name="cds_object_id">
+            <xsl:element name="cds_object_id_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -121,10 +121,7 @@
 
     <xsl:template name="institution">
         <xsl:param name="repository"/>
-        <xsl:element name="institution">
-            <xsl:attribute name="analyze">true</xsl:attribute>
-            <xsl:attribute name="store">true</xsl:attribute>
-            <xsl:attribute name="facet">true</xsl:attribute>
+        <xsl:element name="institution_ss">
             <xsl:choose>
                 <xsl:when test="$repository='lidoYCBA'">
                     <xsl:text>Yale Center for British Art</xsl:text>
@@ -142,18 +139,12 @@
   	 	<xsl:param name="setString"/>
      		<xsl:choose>
             	<xsl:when test="contains($setString, 'incomplete')">     	
-                	<xsl:element name="record_complete">
-                    	<xsl:attribute name="analyze">false</xsl:attribute>
-                    	<xsl:attribute name="store">true</xsl:attribute>
-                    	<xsl:attribute name="facet">true</xsl:attribute>
+                	<xsl:element name="record_complete_ss">
                     	<xsl:text>Incompelete</xsl:text>
             		</xsl:element>
             	</xsl:when> 
             	<xsl:otherwise>
-                 	<xsl:element name="record_complete">
-                    	<xsl:attribute name="analyze">false</xsl:attribute>
-                    	<xsl:attribute name="store">true</xsl:attribute>
-                    	<xsl:attribute name="facet">true</xsl:attribute>
+                 	<xsl:element name="record_complete_ss">
                     	<xsl:text>Complete</xsl:text>
             		</xsl:element>
             	</xsl:otherwise>    
@@ -164,119 +155,20 @@
         <xsl:param name="set"/>
         <xsl:choose>
             <xsl:when test="$set='ycba:ps'">
-                <xsl:element name="collection">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
-                    <xsl:attribute name="facet">true</xsl:attribute>
+                <xsl:element name="collection_ss">
                     <xsl:text>Paintings and Sculpture</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ycba:frames'">
-                <xsl:element name="collection">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
-                    <xsl:attribute name="facet">true</xsl:attribute>
+                <xsl:element name="collection_ss">
                     <xsl:text>Frames</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ycba:pd'">
-                <xsl:element name="collection">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
-                    <xsl:attribute name="facet">true</xsl:attribute>
+                <xsl:element name="collection_ss">
                     <xsl:text>Prints and Drawings</xsl:text>
                 </xsl:element>
             </xsl:when>
-            <!-- 
-                <xsl:when test="$set='10720'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>African Art</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10721'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>American Decorative Arts</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10722'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>American Paintings and Sculpture</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10723'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>Ancient Art</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10570'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>Asian Art</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10724'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>Coins and Medals</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10725'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>European Art</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10726'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>Indo-Pacific Art</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10727'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>Modern and Contemporary Art</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10728'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>Prints, Drawings, and Photographs</xsl:text>
-                </xsl:element>
-                </xsl:when>
-                <xsl:when test="$set='10735'">
-                <xsl:element name="collection">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
-                <xsl:text>Precolumbian Art</xsl:text>
-                </xsl:element>
-                </xsl:when> 
-            -->
         </xsl:choose>
     </xsl:template>
 
@@ -285,34 +177,22 @@
             select="lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:repositoryLocation/lido:partOfPlace/lido:namePlaceSet/lido:appellationValue">
             <xsl:choose>
                 <xsl:when test="@lido:label='Site'">
-                    <xsl:element name="building">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="building_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="@lido:label='SubSite'">
-                    <xsl:element name="building_subSite">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="building_subSite_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="@lido:label='Floor'">
-                    <xsl:element name="building_floor">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="building_floor_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="@lido:label='UnitType'">
-                    <xsl:element name="building_bay">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="building_bay_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:when>
@@ -323,10 +203,7 @@
     <xsl:template name="type">
         <xsl:for-each
             select="lido:objectClassificationWrap/lido:classificationWrap/lido:classification/lido:term">
-            <xsl:element name="type">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="type_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -335,18 +212,13 @@
     <xsl:template name="format">
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event/lido:eventMaterialsTech/lido:displayMaterialsTech">
-            <xsl:element name="format">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="format_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event/lido:eventMaterialsTech/lido:materialsTech/lido:termMaterialsTech/lido:term">
-            <xsl:element name="auth_format">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="auth_format_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -357,9 +229,7 @@
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']">
             <!-- <xsl:for-each select="lido:eventActor[1]/lido:actorInRole/lido:actor/lido:nameActorSet/lido:appellationValue[@lido:pref='preferred'][1]"> -->
             <xsl:for-each select="lido:eventActor/lido:displayActorInRole">
-                <xsl:element name="author">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
+                <xsl:element name="author_ss">
                     <xsl:value-of select="normalize-space(.)"/>
                 </xsl:element>
             </xsl:for-each>
@@ -368,67 +238,43 @@
                     <xsl:for-each select="lido:actor">
                         <xsl:for-each
                             select="lido:nameActorSet/lido:appellationValue[@lido:pref='alternate']">
-                            <xsl:element name="auth_author">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="auth_author_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>                       
                         <xsl:for-each
                             select="lido:nameActorSet/lido:appellationValue[@lido:pref='preferred'][1]">
-                            <xsl:element name="auth_author">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="auth_author_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
-                            <xsl:element name="auth_author_display">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="auth_author_display_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:nationalityActor/lido:term">
-                            <xsl:element name="author_nationality">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="author_nationality_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:vitalDatesActor/lido:earliestDate">
-                            <xsl:element name="author_earliestDate">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="author_earliestDate_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:vitalDatesActor/lido:latestDate">
-                            <xsl:element name="author_latestDate">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="author_latestDate_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:genderActor">
-                            <xsl:element name="author_gender">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="author_gender_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                     </xsl:for-each>
                     <xsl:for-each
                         select="lido:roleActor[lido:conceptID/@lido:type='Life role']/lido:term">
-                        <xsl:element name="author_role">
-                            <xsl:attribute name="analyze">true</xsl:attribute>
-                            <xsl:attribute name="store">true</xsl:attribute>
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="author_role_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
@@ -436,36 +282,24 @@
             </xsl:for-each>
             <xsl:for-each select="lido:eventPlace[@lido:type='Death place']/lido:place">
                 <xsl:for-each select="lido:namePlaceSet/lido:appellationValue">
-                    <xsl:element name="author_deathPlaceName">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_deathPlaceName_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
                 <xsl:for-each select="lido:gml/gml:Point/gml:coordinates">
-                    <xsl:element name="author_deathPlaceCoordinates">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_deathPlaceCoordinates_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
             </xsl:for-each>
             <xsl:for-each select="lido:eventPlace[@lido:type='Birth place']/lido:place">
                 <xsl:for-each select="lido:namePlaceSet/lido:appellationValue">
-                    <xsl:element name="author_birthPlaceName">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_birthPlaceName_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
                 <xsl:for-each select="lido:gml/gml:Point/gml:coordinates">
-                    <xsl:element name="author_birthPlaceCoordinates">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_birthPlaceCoordinates_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
@@ -473,18 +307,12 @@
             <xsl:for-each
                 select="lido:eventPlace[@lido:type='Place of Activity']/lido:place">
                 <xsl:for-each select="lido:namePlaceSet/lido:appellationValue">
-                    <xsl:element name="author_placeOfActivityName">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_placeOfActivityName_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
                 <xsl:for-each select="lido:gml/gml:Point/gml:coordinates">
-                    <xsl:element name="author_placeOfActivityCoordinates">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_placeOfActivityCoordinates_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
@@ -492,18 +320,12 @@
             <xsl:for-each
                 select="lido:eventPlace[@lido:type='Place of Visit/Tour']/lido:place">
                 <xsl:for-each select="lido:namePlaceSet/lido:appellationValue">
-                    <xsl:element name="author_placeOfVisitName">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_placeOfVisitName_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
                 <xsl:for-each select="lido:gml/gml:Point/gml:coordinates">
-                    <xsl:element name="author_placeOfVisitCoordinates">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="author_placeOfVisitCoordinates_ss">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:element>
                 </xsl:for-each>
@@ -514,24 +336,16 @@
     <xsl:template name="title">
         <xsl:for-each
             select="lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet[@lido:type='Repository title']/lido:appellationValue[@lido:pref='preferred']">
-            <xsl:element name="title">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="title_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="title_sort">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="title_sort_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="title_short">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="title_short_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="title_full">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="title_full_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -541,9 +355,7 @@
         <xsl:for-each
             select="lido:objectIdentificationWrap/lido:objectMeasurementsWrap/lido:objectMeasurementsSet">
             <xsl:for-each select="lido:displayObjectMeasurements">
-                <xsl:element name="physical">
-                    <xsl:attribute name="analyze">false</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
+                <xsl:element name="physical_ss">
                     <xsl:value-of select="normalize-space(.)"/>
                 </xsl:element>
             </xsl:for-each>
@@ -551,90 +363,60 @@
                 <xsl:choose>
                     <xsl:when test="lido:measurementType='height'">
                         <xsl:for-each select="lido:measurementUnit">
-                            <xsl:element name="physical_heightUnit">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_heightUnit_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:measurementValue">
-                            <xsl:element name="physical_heightValue">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_heightValue_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:when test="lido:measurementType='width'">
                         <xsl:for-each select="lido:measurementUnit">
-                            <xsl:element name="physical_widthUnit">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_widthUnit_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:measurementValue">
-                            <xsl:element name="physical_widthValue">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_widthValue_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:when test="lido:measurementType='depth'">
                         <xsl:for-each select="lido:measurementUnit">
-                            <xsl:element name="physical_depthUnit">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_depthUnit_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:measurementValue">
-                            <xsl:element name="physical_depthValue">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_depthValue_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:when test="lido:measurementType='diameter'">
                         <xsl:for-each select="lido:measurementUnit">
-                            <xsl:element name="physical_diameterUnit">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_diameterUnit_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:measurementValue">
-                            <xsl:element name="physical_diameterValue">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_diameterValue_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                     </xsl:when>
                     <xsl:when test="lido:measurementType='weight'">
                         <xsl:for-each select="lido:measurementUnit">
-                            <xsl:element name="physical_weightUnit">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_weightUnit_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
                         <xsl:for-each select="lido:measurementValue">
-                            <xsl:element name="physical_weightValue">
-                                <xsl:attribute name="analyze">true</xsl:attribute>
-                                <xsl:attribute name="store">true</xsl:attribute>
-                                <xsl:attribute name="facet">true</xsl:attribute>
+                            <xsl:element name="physical_weightValue_ss">
                                 <xsl:value-of select="normalize-space(.)"/>
                             </xsl:element>
                         </xsl:for-each>
@@ -647,9 +429,7 @@
     <xsl:template name="publishDate">
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']/lido:eventDate/lido:displayDate">
-            <xsl:element name="publishDate">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="publishDate_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -658,9 +438,7 @@
     <xsl:template name="edition">
         <xsl:for-each select="lido:objectIdentificationWrap/lido:displayStateEditionWrap">
             <xsl:for-each select="displayState|displayEdition">
-                <xsl:element name="edition">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
+                <xsl:element name="edition_ss">
                     <xsl:value-of select="normalize-space(.)"/>
                 </xsl:element>
             </xsl:for-each>
@@ -671,9 +449,7 @@
         <xsl:for-each
             select="lido:objectIdentificationWrap/lido:inscriptionsWrap/lido:inscriptions/lido:inscriptionTranscription">
             <xsl:if test=".!=''">
-                <xsl:element name="description">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
+                <xsl:element name="description_ss">
                     <xsl:value-of select="normalize-space(.)"/>
                 </xsl:element>
             </xsl:if>
@@ -682,10 +458,7 @@
 
     <xsl:template name="credit_line">
         <xsl:for-each select="lido:rightsWorkWrap/lido:rightsWorkSet/lido:creditLine">
-            <xsl:element name="credit_line">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="credit_line_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -694,9 +467,7 @@
     <xsl:template name="rights">
         <xsl:for-each
             select="lido:rightsWorkWrap/lido:rightsWorkSet[lido:rightsType/lido:conceptID/@lido:type='object copyright']/lido:rightsHolder/lido:legalBodyName/lido:appellationValue">
-            <xsl:element name="rights">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="rights_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -705,19 +476,14 @@
     <xsl:template name="rights_resource">
         <xsl:for-each
             select="lido:resourceWrap/lido:resourceSet/lido:rightsResource/lido:rightsHolder/lido:legalBodyID[@lido:type='url']">
-            <xsl:element name="rights_resource">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="rights_resource_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
     </xsl:template>
 
     <xsl:template name="resource">
-        <xsl:element name="resource">
-            <xsl:attribute name="analyze">true</xsl:attribute>
-            <xsl:attribute name="store">true</xsl:attribute>
-            <xsl:attribute name="facet">true</xsl:attribute>
+        <xsl:element name="resource_ss">
             <xsl:choose>
                 <xsl:when
                     test="lido:resourceWrap/lido:resourceSet/lido:resourceRepresentation/lido:linkResource">
@@ -733,10 +499,7 @@
     <xsl:template name="access">
         <xsl:if
             test="lido:resourceWrap/lido:resourceSet/lido:resourceRepresentation/lido:linkResource">
-            <xsl:element name="access">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="access_ss">
                 <xsl:value-of select="$access"/>
             </xsl:element>
         </xsl:if>
@@ -745,9 +508,7 @@
     <xsl:template name="url">
         <xsl:for-each
             select="lido:recordWrap/lido:recordInfoSet/lido:recordInfoLink[@lido:formatResource='html']">
-            <xsl:element name="url">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="url_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -756,9 +517,7 @@
     <xsl:template name="thumbnail">
         <xsl:for-each
             select="lido:resourceWrap/lido:resourceSet/lido:resourceRepresentation[@lido:type='thumb']/lido:linkResource">
-            <xsl:element name="thumbnail">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="thumbnail_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -767,9 +526,7 @@
     <xsl:template name="resourceURL">
         <xsl:for-each
             select="lido:resourceWrap/lido:resourceSet/lido:resourceRepresentation[@lido:type='large']/lido:linkResource">
-            <xsl:element name="resourceURL">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="resourceURL_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -778,9 +535,7 @@
     <xsl:template name="callnumber">
         <xsl:for-each
             select="lido:objectIdentificationWrap/lido:repositoryWrap/lido:repositorySet/lido:workID[@lido:type='inventory number']">
-            <xsl:element name="callnumber">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="callnumber_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -789,9 +544,7 @@
     <xsl:template name="title_alt">
         <xsl:for-each
             select="lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet[not(@lido:type='collective title')]/lido:appellationValue[@lido:pref='alternate']">
-            <xsl:element name="title_alt">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="title_alt_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -800,10 +553,7 @@
     <xsl:template name="title_collective">
         <xsl:for-each
             select="lido:objectIdentificationWrap/lido:titleWrap/lido:titleSet[@lido:type='Collective title']/lido:appellationValue[@lido:pref='alternate']">
-            <xsl:element name="title_collective">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="title_collective_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -812,10 +562,7 @@
     <xsl:template name="earliestDate">
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']/lido:eventDate/lido:date/lido:earliestDate">
-            <xsl:element name="earliestDate">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="earliestDate_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -824,10 +571,7 @@
     <xsl:template name="latestDate">
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']/lido:eventDate/lido:date/lido:latestDate">
-            <xsl:element name="latestDate">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="latestDate_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -838,58 +582,50 @@
             <xsl:choose>
                 <xsl:when test="@lido:type='iconography'">
                     <xsl:for-each select="lido:subjectConcept/lido:term">
-                        <xsl:element name="topic">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
                 </xsl:when>
                 <xsl:when test="@lido:type='description'">
                     <xsl:for-each select="lido:subjectConcept[lido:conceptID/@lido:type='frame style']/lido:term">
-                        <xsl:element name="topic_frameStyle">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_frameStyle_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
 
                     <xsl:for-each select="lido:subjectConcept[lido:conceptID/@lido:type='frame alteration']/lido:term">
-                        <xsl:element name="topic_frameAlteration">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_frameAlteration_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
 
                     <xsl:for-each select="lido:subjectConcept[lido:conceptID/@lido:type='frame cross-section']/lido:term">
-                        <xsl:element name="topic_frameCrossSection">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_frameCrossSection_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
 
                     <xsl:for-each select="lido:subjectConcept[lido:conceptID/@lido:type='frame feature']/lido:term">
-                        <xsl:element name="topic_frameFeature">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_frameFeature_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
 
                     <xsl:for-each select="lido:subjectConcept[lido:conceptID/@lido:type='frame ornament']/lido:term">
-                        <xsl:element name="topic_frameOrnament">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_frameOrnament_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
 
                     <xsl:for-each select="lido:subjectConcept[lido:conceptID/@lido:type='frame status']/lido:term">
-                        <xsl:element name="topic_frameStatus">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_frameStatus_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
 
                     <xsl:for-each select="lido:subjectConcept[lido:conceptID/@lido:type='frame quality']/lido:term">
-                        <xsl:element name="topic_frameQuality">
-                            <xsl:attribute name="facet">true</xsl:attribute>
+                        <xsl:element name="topic_frameQuality_ss">
                             <xsl:value-of select="normalize-space(.)"/>
                         </xsl:element>
                     </xsl:for-each>
@@ -901,26 +637,17 @@
     <xsl:template name="genre">
         <xsl:for-each
             select="lido:objectClassificationWrap/lido:objectWorkTypeWrap/lido:objectWorkType">
-            <xsl:element name="genre">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="genre_ss">
                 <xsl:value-of select="normalize-space(lido:term)"/>
             </xsl:element>
             <xsl:choose>
                 <xsl:when test="lido:conceptID/@lido:type='Genre'">
-                    <xsl:element name="genre_name">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="genre_name_ss">
                         <xsl:value-of select="normalize-space(lido:term)"/>
                     </xsl:element>
                 </xsl:when>
                 <xsl:when test="lido:conceptID/@lido:type='Object name'">
-                    <xsl:element name="object_name">
-                        <xsl:attribute name="analyze">true</xsl:attribute>
-                        <xsl:attribute name="store">true</xsl:attribute>
-                        <xsl:attribute name="facet">true</xsl:attribute>
+                    <xsl:element name="object_name_ss">
                         <xsl:value-of select="normalize-space(lido:term)"/>
                     </xsl:element>
                 </xsl:when>
@@ -1047,10 +774,7 @@
                 </xsl:choose>
             </xsl:variable>
             <xsl:if test="$gis!='none'">
-                <xsl:element name="geographic_gis">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
-                    <xsl:attribute name="facet">true</xsl:attribute>
+                <xsl:element name="geographic_gis_ss">
                     <xsl:value-of select="$gis"/>
                 </xsl:element>
             </xsl:if>
@@ -1060,10 +784,7 @@
     <xsl:template name="geographic_culture">
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']/lido:culture/lido:term">
-            <xsl:element name="geographic_culture">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="geographic_culture_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1072,10 +793,7 @@
     <xsl:template name="era">
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']/lido:periodName/lido:term">
-            <xsl:element name="era">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="era_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1084,10 +802,7 @@
     <xsl:template name="eventType">
         <xsl:for-each select="lido:eventWrap/lido:eventSet/lido:event/lido:eventType/lido:term">
             <xsl:if test=".!='production'">
-                <xsl:element name="eventType">
-                    <xsl:attribute name="analyze">true</xsl:attribute>
-                    <xsl:attribute name="store">true</xsl:attribute>
-                    <xsl:attribute name="facet">true</xsl:attribute>
+                <xsl:element name="eventType_ss">
                     <xsl:value-of select="normalize-space(.)"/>
                 </xsl:element>
             </xsl:if>
@@ -1096,9 +811,7 @@
 
     <xsl:template name="recordSource">
         <xsl:for-each select="lido:recordWrap/lido:recordSource/lido:legalBodyWeblink">
-            <xsl:element name="recordSource">
-                <xsl:attribute name="analyze">false</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
+            <xsl:element name="recordSource_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1106,10 +819,7 @@
 
     <xsl:template name="recordID">
         <xsl:for-each select="lido:recordWrap/lido:recordID[@lido:type='local']">
-            <xsl:element name="recordID">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="recordID_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1117,10 +827,7 @@
 
     <xsl:template name="recordLevel">
         <xsl:for-each select="lido:recordWrap/lido:recordType/lido:term">
-            <xsl:element name="recordLevel">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="recordLevel_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1131,12 +838,10 @@
      -->
     <xsl:template name="topic_subjectConcept">
         <xsl:for-each select="lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject[@lido:type='description']/lido:subjectConcept[lido:conceptID/@lido:type='subjectConcept']/lido:term">
-            <xsl:element name="topic_subjectConcept">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_subjectConcept_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="topic">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1144,8 +849,7 @@
 
     <xsl:template name="topic_subjectActor">
         <xsl:for-each select="lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject[@lido:type='description']/lido:subjectActor/lido:displayActor">
-            <xsl:element name="topic_subjectActor">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_subjectActor_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1153,12 +857,10 @@
 
     <xsl:template name="topic_subjectEvent">
         <xsl:for-each select="lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject[@lido:type='description']/lido:subjectEvent/lido:event/lido:eventType/lido:term">
-            <xsl:element name="topic_subjectEvent">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_subjectEvent_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="topic">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1166,14 +868,10 @@
 
     <xsl:template name="topic_subjectPlace">
         <xsl:for-each select="lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject[@lido:type='description']/lido:subjectPlace/lido:displayPlace">
-            <xsl:element name="topic_subjectPlace">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_subjectPlace_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="geographic">
-                <xsl:attribute name="analyze">true</xsl:attribute>
-                <xsl:attribute name="store">true</xsl:attribute>
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="geographic_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1181,12 +879,10 @@
 
     <xsl:template name="topic_subjectObject">
         <xsl:for-each select="lido:objectRelationWrap/lido:subjectWrap/lido:subjectSet/lido:subject[@lido:type='description']/lido:subjectObject/lido:displayObject">
-            <xsl:element name="topic_subjectObject">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_subjectObject_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
-            <xsl:element name="topic">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="topic_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1194,8 +890,7 @@
 
     <xsl:template name="oclc_number">
         <xsl:for-each select="lido:objectRelationWrap/lido:relatedWorksWrap/lido:relatedWorkSet/lido:relatedWork/lido:object/lido:objectID[@lido:type='local' and @lido:source='OCLC Number']">
-            <xsl:element name="oclc_number">
-                <xsl:attribute name="facet">true</xsl:attribute>
+            <xsl:element name="oclc_number_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
@@ -1203,7 +898,7 @@
 
     <xsl:template name="citation">
         <xsl:for-each select="lido:objectRelationWrap/lido:relatedWorksWrap/lido:relatedWorkSet/lido:relatedWork">
-            <xsl:element name="citation">
+            <xsl:element name="citation_ss">
                 <xsl:value-of select="normalize-space(lido:displayObject)"/>
                 <xsl:value-of select="normalize-space(lido:object/lido:objectNote)"/>
             </xsl:element>
