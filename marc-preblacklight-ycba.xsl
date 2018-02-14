@@ -2849,7 +2849,7 @@
     <xsl:template name="resourceURL">
         <xsl:for-each select="marc:datafield[@tag='856']">
             <xsl:element name="resourceURL_ss">
-                <xsl:element name="caption">
+                <xsl:element name="caption_ss">
                     <xsl:choose>
                         <xsl:when test="marc:subfield[@code='y']">
                             <xsl:value-of select="normalize-space(marc:subfield[@code='y'])"/>
@@ -2862,7 +2862,7 @@
                         </xsl:when>
                     </xsl:choose>
                 </xsl:element>
-                <xsl:element name="url">
+                <xsl:element name="url_ss">
                     <xsl:value-of select="normalize-space(marc:subfield[@code='u'])"/>
                 </xsl:element>
             </xsl:element>
