@@ -101,7 +101,7 @@
        configuration.
     -->
   <!--<dataDir>${solr.data.dir:}</dataDir>-->
-  <dataDir>/home/solr/solr/home/solr/ycba-blacklight/data<dataDir>
+  <dataDir>/home/solr/solr/home/solr/ycba-blacklight/data</dataDir>
 
 
   <!-- The DirectoryFactory to use for indexes.
