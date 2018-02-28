@@ -23,8 +23,7 @@
 
     <!-- variables set by user -->
     <xsl:variable name="url">http://hdl.handle.net/10079/bibid/</xsl:variable>
-
-
+              
     <xsl:template match="marc:record">
         <xsl:element name="metadata">
             <xsl:call-template name="institution">
@@ -61,6 +60,7 @@
             <xsl:call-template name="genre"/>
             <xsl:call-template name="geographic"/>
             <xsl:call-template name="era"/>
+            <xsl:call-template name="fullrecord"/>
         </xsl:element>
     </xsl:template>
 
@@ -3060,4 +3060,11 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template name="fullrecord">
+            <xsl:element name="fullrecord_txt">
+                <xsl:copy-of select="."/>
+            </xsl:element>
+    </xsl:template>
+    
 </xsl:stylesheet>
