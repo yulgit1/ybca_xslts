@@ -150,8 +150,12 @@
   <dynamicField name="*_d" type="double" indexed="true" stored="true"/>
   <dynamicField name="*_p" type="location" indexed="true" stored="true"/>
   <dynamicField name="*_c" type="currency" indexed="true" stored="true"/>
-
+  
+  <!-- for ITS/odai workflow compatability -->
+  <field name="callnumber" type="string" indexed="true" stored="true"/>
   <field name="fullrecord" type="string" indexed="false" stored="true"/>
+  <field name="recordtype" type="string" indexed="true" stored="true"/>   
+  <field name="allfields" type="text" indexed="true" stored="false"/>
 
   <copyField source="fullrecord" dest="fullrecord_txt"/>
   <copyField source="*_ss" dest="*_txt"/>
