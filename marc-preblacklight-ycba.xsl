@@ -24,12 +24,20 @@
     <!-- variables set by user -->
     <xsl:variable name="url">http://hdl.handle.net/10079/bibid/</xsl:variable>
               
+    <xsl:template match="OAI-PMH">
+        <xsl:for-each select="responseDate">
+            <xsl:element name="responseDate">
+                <xsl:value-of select="normalize-space(.)"/> 
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template> 
+    
     <xsl:template match="marc:record">
         <xsl:element name="metadata">
             <xsl:call-template name="institution">
                 <xsl:with-param name="repository" select="$repository"/>
             </xsl:call-template>
-            <xsl:call-template name="collection_ss">
+            <xsl:call-template name="collection">
                 <xsl:with-param name="set" select="$set"/>
             </xsl:call-template>
             <xsl:call-template name="language"/>
@@ -60,7 +68,7 @@
             <xsl:call-template name="genre"/>
             <xsl:call-template name="geographic"/>
             <xsl:call-template name="era"/>
-            <xsl:call-template name="fullrecord"/>
+            <!--<xsl:call-template name="fullrecord"/>-->
         </xsl:element>
     </xsl:template>
 
@@ -79,16 +87,16 @@
         </xsl:element>
     </xsl:template>
 
-    <xsl:template name="collection_ss">
+    <xsl:template name="collection">
         <xsl:param name="set"/>
         <xsl:choose>
             <xsl:when test="starts-with($set,'bacrb')">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Rare Books and Manuscripts</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="starts-with($set,'bacref')">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Reference Library</xsl:text>
                 </xsl:element>
             </xsl:when>
@@ -103,162 +111,162 @@
                 </xsl:when>
             -->
             <xsl:when test="$set='smlmap' or $set='smlmapl'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Sterling Memorial Library Map collection_ss</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='bassill'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccl'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccl2wkr'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccl3day'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclaud'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclaudio'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclbind'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclborr'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclcd'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclclicker'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclclos'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccldvd'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclec'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccletextcd'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclger'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclgraph'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclhr2'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclhr24'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccllibn'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclmtn'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclnew'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclop'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclpoor'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclpres'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclra1'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclref'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclrefa'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclsoft'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccltran'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='ccltravel'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
             <xsl:when test="$set='cclvd'">
-                <xsl:element name="collection_ss_ss">
+                <xsl:element name="collection_ss">
                     <xsl:text>Bass Library</xsl:text>
                 </xsl:element>
             </xsl:when>
@@ -2849,7 +2857,6 @@
     <xsl:template name="resourceURL">
         <xsl:for-each select="marc:datafield[@tag='856']">
             <xsl:element name="resourceURL_ss">
-                <xsl:element name="caption_ss">
                     <xsl:choose>
                         <xsl:when test="marc:subfield[@code='y']">
                             <xsl:value-of select="normalize-space(marc:subfield[@code='y'])"/>
@@ -2861,10 +2868,8 @@
                             <xsl:value-of select="normalize-space(marc:subfield[@code='z'])"/>
                         </xsl:when>
                     </xsl:choose>
-                </xsl:element>
-                <xsl:element name="url_ss">
+                    <xsl:text>&#x0A;</xsl:text>
                     <xsl:value-of select="normalize-space(marc:subfield[@code='u'])"/>
-                </xsl:element>
             </xsl:element>
         </xsl:for-each>
     </xsl:template>
@@ -3061,10 +3066,10 @@
         </xsl:choose>
     </xsl:template>
     
-    <xsl:template name="fullrecord">
+  <!--  <xsl:template name="fullrecord">
             <xsl:element name="fullrecord_txt">
                 <xsl:copy-of select="."/>
             </xsl:element>
-    </xsl:template>
+    </xsl:template>-->
     
 </xsl:stylesheet>
