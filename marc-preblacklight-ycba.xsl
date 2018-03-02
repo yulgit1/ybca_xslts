@@ -24,14 +24,6 @@
     <!-- variables set by user -->
     <xsl:variable name="url">http://hdl.handle.net/10079/bibid/</xsl:variable>
               
-    <xsl:template match="OAI-PMH">
-        <xsl:for-each select="responseDate">
-            <xsl:element name="responseDate">
-                <xsl:value-of select="normalize-space(.)"/> 
-            </xsl:element>
-        </xsl:for-each>
-    </xsl:template> 
-    
     <xsl:template match="marc:record">
         <xsl:element name="metadata">
             <xsl:call-template name="institution">
