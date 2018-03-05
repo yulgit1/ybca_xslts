@@ -156,6 +156,7 @@
   <field name="fullrecord" type="string" indexed="false" stored="true"/>
   <field name="recordtype" type="string" indexed="true" stored="true"/>
   <field name="allfields" type="text_general" indexed="true" stored="false"/>
+  <field name="language" type="string" indexed="true" stored="true"/>
 
   <copyField source="fullrecord" dest="fullrecord_txt"/>
   <copyField source="*_ss" dest="*_txt"/>
