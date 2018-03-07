@@ -2990,11 +2990,11 @@
     <xsl:template name="genre">
         <xsl:variable name="codes">abvxyz</xsl:variable>
         <xsl:for-each select="marc:datafield[@tag='655']">
-            <xsl:element name="genre_ss">
+            <xsl:element name="form_genre_ss">
                 <xsl:for-each select="marc:subfield[contains($codes,@code)]">
                     <xsl:value-of select="normalize-space(.)"/>
                     <xsl:if test="following-sibling::marc:subfield[contains($codes,@code)]">
-                        <xsl:text> </xsl:text>
+                        <xsl:text> -- </xsl:text>
                     </xsl:if>
                 </xsl:for-each>
             </xsl:element>
@@ -3058,13 +3058,14 @@
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
-    
+     
     <xsl:template name="isbn">
         <xsl:for-each select="marc:datafield[@tag='020']">
             <xsl:element name="isbn_ss">
                 <xsl:for-each select="marc:subfield[@code='a']">
-                    <xsl:value-of select="normalize-space(.)"/>
+                    <xsl:if test="string-length(normalize-space(.)) = 10">
+                        <xsl:value-of select="normalize-space(.)"/>
+                    </xsl:if>
                 </xsl:for-each>
             </xsl:element>
         </xsl:for-each>
