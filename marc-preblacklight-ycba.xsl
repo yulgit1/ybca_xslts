@@ -60,6 +60,7 @@
             <xsl:call-template name="genre"/>
             <xsl:call-template name="geographic"/>
             <xsl:call-template name="era"/>
+            <xsl:call-template name="isbn"/>
             <!--<xsl:call-template name="fullrecord"/>-->
         </xsl:element>
     </xsl:template>
@@ -3056,6 +3057,17 @@
                 </xsl:for-each>
             </xsl:otherwise>
         </xsl:choose>
+    </xsl:template>
+    
+    
+    <xsl:template name="isbn">
+        <xsl:for-each select="marc:datafield[@tag='020']">
+            <xsl:element name="isbn_ss">
+                <xsl:for-each select="marc:subfield[@code='a']">
+                    <xsl:value-of select="normalize-space(.)"/>
+                </xsl:for-each>
+            </xsl:element>
+        </xsl:for-each>
     </xsl:template>
     
   <!--  <xsl:template name="fullrecord">
