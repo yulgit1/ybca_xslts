@@ -3074,11 +3074,11 @@
     
     <xsl:template name="marc_contents">
         <xsl:for-each select="marc:datafield[@tag='505']">
-            <xsl:element name="marc_contents_ss">
-                <xsl:for-each select="marc:subfield[@code='a']">
+            <xsl:for-each select="marc:subfield[@code='a']">
+                <xsl:element name="marc_contents_ss">
                     <xsl:value-of select="normalize-space(.)"/>
-                </xsl:for-each>
-            </xsl:element>
+                </xsl:element>
+            </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
     
