@@ -61,6 +61,7 @@
             <xsl:call-template name="geographic"/>
             <xsl:call-template name="era"/>
             <xsl:call-template name="isbn"/>
+            <xsl:call-template name="marc_contents"/>
             <!--<xsl:call-template name="fullrecord"/>-->
         </xsl:element>
     </xsl:template>
@@ -3066,6 +3067,16 @@
                     <xsl:if test="string-length(normalize-space(.)) = 10">
                         <xsl:value-of select="normalize-space(.)"/>
                     </xsl:if>
+                </xsl:for-each>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="marc_contents">
+        <xsl:for-each select="marc:datafield[@tag='505']">
+            <xsl:element name="marc_contents_ss">
+                <xsl:for-each select="marc:subfield[@code='a']">
+                    <xsl:value-of select="normalize-space(.)"/>
                 </xsl:for-each>
             </xsl:element>
         </xsl:for-each>
