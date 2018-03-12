@@ -97,6 +97,7 @@
                 <xsl:call-template name="credit_line"/>
                 <xsl:call-template name="rights"/>
                 <xsl:call-template name="ort"/>
+                <xsl:call-template name="rightsurl"/>
                 <xsl:call-template name="rights_resource"/>
                 <xsl:call-template name="resource"/>
                 <xsl:call-template name="access"/>
@@ -476,7 +477,7 @@
     
     <xsl:template name="ort">
         <xsl:for-each
-            select="lido:rightsWorkWrap/lido:rightsWorkSet[lido:rightsType/lido:conceptID/@lido:type='object copyright']">
+            select="lido:rightsWorkWrap/lido:rightsWorkSet/lido:rightsType/lido:conceptID[@lido:type='object copyright']">
             <xsl:element name="ort_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
@@ -487,6 +488,15 @@
         <xsl:for-each
             select="lido:resourceWrap/lido:resourceSet/lido:rightsResource/lido:rightsHolder/lido:legalBodyID[@lido:type='url']">
             <xsl:element name="rights_resource_ss">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="rightsurl">
+        <xsl:for-each
+            select="lido:resourceWrap/lido:resourceSet/lido:rightsResource/lido:rightsHolder/lido:legalBodyID[@lido:type='URL']">
+            <xsl:element name="rightsURL_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
