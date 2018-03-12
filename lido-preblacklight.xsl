@@ -96,6 +96,7 @@
             <xsl:for-each select="lido:administrativeMetadata">
                 <xsl:call-template name="credit_line"/>
                 <xsl:call-template name="rights"/>
+                <xsl:call-template name="ort"/>
                 <xsl:call-template name="rights_resource"/>
                 <xsl:call-template name="resource"/>
                 <xsl:call-template name="access"/>
@@ -468,6 +469,15 @@
         <xsl:for-each
             select="lido:rightsWorkWrap/lido:rightsWorkSet[lido:rightsType/lido:conceptID/@lido:type='object copyright']/lido:rightsHolder/lido:legalBodyName/lido:appellationValue">
             <xsl:element name="rights_ss">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="ort">
+        <xsl:for-each
+            select="lido:rightsWorkWrap/lido:rightsWorkSet[lido:rightsType/lido:conceptID/@lido:type='object copyright']">
+            <xsl:element name="ort_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
