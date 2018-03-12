@@ -102,6 +102,7 @@
                 <xsl:call-template name="resource"/>
                 <xsl:call-template name="access"/>
                 <xsl:call-template name="url"/>
+                <xsl:call-template name="videourl"/>
                 <xsl:call-template name="thumbnail"/>
                 <xsl:call-template name="resourceURL"/>
                 <xsl:call-template name="recordSource"/>
@@ -529,6 +530,15 @@
         <xsl:for-each
             select="lido:recordWrap/lido:recordInfoSet/lido:recordInfoLink[@lido:formatResource='html']">
             <xsl:element name="url_ss">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="videourl">
+        <xsl:for-each
+            select="lido:resourceWrap/lido:resourceSet/lido:resourceRepresentation/lido:linkResource[@lido:formatResource='video']">
+            <xsl:element name="videourl_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
