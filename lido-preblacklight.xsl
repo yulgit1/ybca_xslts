@@ -82,6 +82,7 @@
                 <xsl:call-template name="geographic_gis"/>
                 <!-- coordinates for smallest political entity or first if political entity not designated -->
                 <xsl:call-template name="era"/>
+                <xsl:call-template name="curatorial_comment"/>
                 <xsl:call-template name="eventType"/>
 
                 <xsl:call-template name="topic_subjectActor"/>
@@ -824,6 +825,15 @@
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event[lido:eventType/lido:term='production']/lido:periodName/lido:term">
             <xsl:element name="era_ss">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="curatorial_comment">
+        <xsl:for-each
+            select="lido:eventWrap/lido:eventSet/lido:displayEvent[../lido:event/lido:eventType/lido:term='Curatorial comment']/text()">
+            <xsl:element name="curatorial_comment_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
