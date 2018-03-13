@@ -84,6 +84,7 @@
                 <xsl:call-template name="era"/>
                 <xsl:call-template name="curatorial_comment"/>
                 <xsl:call-template name="curatorial_comment_author"/>
+                <xsl:call-template name="curatorial_comment_date"/>
                 <xsl:call-template name="eventType"/>
 
                 <xsl:call-template name="topic_subjectActor"/>
@@ -844,6 +845,15 @@
         <xsl:for-each
             select="lido:eventWrap/lido:eventSet/lido:event/lido:eventActor/lido:actorInRole/lido:actor/lido:nameActorSet/lido:appellationValue[../../../../../lido:eventType/lido:term='Curatorial comment']/text()">
             <xsl:element name="curatorial_comment_auth_ss">
+                <xsl:value-of select="normalize-space(.)"/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+    
+    <xsl:template name="curatorial_comment_date">
+        <xsl:for-each
+            select="lido:eventWrap/lido:eventSet/lido:event/lido:eventDate/lido:displayDate[../../lido:eventType/lido:term='Curatorial comment']/text()">
+            <xsl:element name="curatorial_comment_date_ss">
                 <xsl:value-of select="normalize-space(.)"/>
             </xsl:element>
         </xsl:for-each>
